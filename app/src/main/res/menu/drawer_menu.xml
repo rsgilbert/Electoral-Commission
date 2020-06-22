@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/roadmapFragment"
+        android:title="Roadmap" />
+
+    <item
+        android:id="@+id/voteFragment"
+        android:title="@string/vote" />
+
+    <item
+        android:id="@+id/paymentFragment"
+        android:title="Payments" />
+
+    <item
+        android:id="@+id/newsListFragment"
+        android:title="News" />
+
+    <item
+        android:id="@+id/pollingstationsFragment"
+        android:title="Polling Stations" />
+
+    <item
+        android:id="@+id/nominaitonFragment"
+        android:title="Nominations" />
+
+    <item
+        android:id="@+id/staffFragment"
+        android:title="Staff" />
+
+    <item
+        android:id="@+id/hotlineFragment"
+        android:title="Emergency Hotlines" />
+
+    <item
+        android:id="@+id/symbolsFragment"
+        android:title="Voting Symbols" />
+
+</menu>
