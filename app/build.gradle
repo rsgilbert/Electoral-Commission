@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -69,9 +71,9 @@ dependencies {
 //    implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
 //    implementation "com.squareup.retrofit2:converter-scalars:$version_retrofit"
 //
-//    // coroutines
-//    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_kotlin_coroutines"
-//    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_kotlin_coroutines"
+    // coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_kotlin_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_kotlin_coroutines"
 
     // glide
     implementation "com.github.bumptech.glide:glide:$version_glide"
@@ -80,7 +82,7 @@ dependencies {
     implementation "com.jakewharton.timber:timber:$version_timber"
 
     // CircleImageView
-//    implementation "de.hdodenhof:circleimageview:$version_circle_image_view"
+    implementation "de.hdodenhof:circleimageview:$version_circle_image_view"
 
     // gson
     implementation "com.google.code.gson:gson:$version_gson"
@@ -94,7 +96,7 @@ dependencies {
     implementation "org.jetbrains.anko:anko-commons:$version_anko"
 
     // viewpager2
-//    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
 
     // to have many imports in the app
     // multidex
@@ -104,14 +106,14 @@ dependencies {
     // mancj materialsearchbar
     implementation 'com.github.mancj:MaterialSearchBar:0.8.5'
 
-//    // Firebase
-//    implementation 'com.google.firebase:firebase-analytics:17.2.2'
-//
-//    // Firestore
-//    implementation 'com.google.firebase:firebase-firestore-ktx:21.4.3'
-//
-//    // Firebase Storage
-//    implementation 'com.google.firebase:firebase-storage-ktx:19.1.1'
+    // Firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+
+    // Firestore
+    implementation 'com.google.firebase:firebase-firestore-ktx:21.4.3'
+
+    // Firebase Storage
+    implementation 'com.google.firebase:firebase-storage-ktx:19.1.1'
 //
 //    // ThreeTenABP
 //    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4'

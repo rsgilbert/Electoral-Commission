@@ -10,4 +10,11 @@
         android:name="com.lokech.electoralcommission.vote.VoteFragment"
         android:label="Roadmap"
         tools:layout="@layout/fragment_vote" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.lokech.electoralcommission.info.InfoFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/view_pager" />
+
+
 </navigation>

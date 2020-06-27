@@ -3,4 +3,8 @@
     <string name="search_hint">Search</string>
     <string name="news">News</string>
     <string name="vote">Vote</string>
+    <string name="Mission" />
+    <string name="vision">Vision</string>
+    <string name="mission">Mission</string>
+    <string name="goal">Goal</string>
 </resources>

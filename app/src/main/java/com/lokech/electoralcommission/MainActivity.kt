@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         drawerLayout = binding.drawerLayout
         appBarConfiguration =
             AppBarConfiguration(
-                setOf(R.id.roadmapFragment, R.id.voteFragment),
+                setOf(R.id.roadmapFragment, R.id.infoFragment),
                 drawerLayout
             )
         navController = findNavController(R.id.myNavHostFragment)

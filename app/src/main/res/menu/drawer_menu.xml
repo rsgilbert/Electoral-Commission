@@ -7,6 +7,11 @@
         android:title="Roadmap" />
 
     <item
+        android:id="@+id/infoFragment"
+        android:icon="@drawable/ec"
+        android:title="@string/app_name" />
+
+    <item
         android:id="@+id/voteFragment"
         android:title="@string/vote" />
 
