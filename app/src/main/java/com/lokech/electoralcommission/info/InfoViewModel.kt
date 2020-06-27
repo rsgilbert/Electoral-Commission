@@ -2,9 +2,8 @@ package com.lokech.electoralcommission.info
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.firebase.firestore.ktx.toObject
 import com.lokech.electoralcommission.data.Info
-import com.lokech.electoralcommission.util.infoCollection
+import com.lokech.electoralcommission.util.withInfo
 
 class InfoViewModel : ViewModel() {
 
@@ -14,11 +13,10 @@ class InfoViewModel : ViewModel() {
         setInfoLiveData()
     }
 
-
 }
 
 fun InfoViewModel.setInfoLiveData() {
-    infoCollection.document("ec_info").addSnapshotListener { snapshot, _ ->
-        infoLiveData.value = snapshot?.toObject<Info>()
+    withInfo {
+        infoLiveData.value = it
     }
 }

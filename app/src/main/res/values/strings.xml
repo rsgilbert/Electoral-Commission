@@ -7,4 +7,13 @@
     <string name="vision">Vision</string>
     <string name="mission">Mission</string>
     <string name="goal">Goal</string>
+    <string name="website">Website</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="youtube">YouTube</string>
+    <string name="email">Email</string>
+    <string name="telephone">Telephone</string>
+    <string name="tollfree">Toll Free</string>
+    <string name="gallery">Gallery</string>
+    <string name="about_electoral_commission">About Electoral Commission</string>
 </resources>

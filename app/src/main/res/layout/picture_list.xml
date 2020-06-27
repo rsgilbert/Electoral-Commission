@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lokech.taxi.journeylist.JourneysFragment">
+
+    <data>
+
+        <variable
+            name="galleryViewModel"
+            type="com.lokech.electoralcommission.gallery.GalleryViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pictureList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="6dp"
+            app:addDivider="@{true}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:pictureList="@{galleryViewModel.pictureListLiveData }"
+            tools:listitem="@layout/picture_item" />
+
+    </RelativeLayout>
+</layout>

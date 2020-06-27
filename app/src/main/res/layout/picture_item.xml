@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="picture"
+            type="com.lokech.electoralcommission.data.Picture" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:imageUrl="@{picture.pictureUrl}"
+            tools:src="@drawable/ec" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{picture.category}"
+            android:textColor="@android:color/secondary_text_light"
+            tools:text="2011 elections" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{picture.title}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/middle_size"
+            tools:text="Casting a ballot" />
+
+
+    </LinearLayout>
+</layout>

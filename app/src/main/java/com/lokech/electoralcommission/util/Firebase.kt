@@ -2,12 +2,15 @@ package com.lokech.electoralcommission.util
 
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
+import com.google.firebase.firestore.ktx.toObjects
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
+import com.lokech.electoralcommission.data.Info
+import com.lokech.electoralcommission.data.Picture
 import timber.log.Timber
 import java.io.InputStream
 import java.util.*
@@ -19,9 +22,7 @@ val storage: FirebaseStorage = Firebase.storage
 
 val infoCollection = db.collection("info")
 
-val journeyCollection: CollectionReference = db.collection("journeys")
-
-val descendingJourneyListQuery: Query = journeyCollection.orderBy("id", Query.Direction.DESCENDING)
+val galleryCollection: CollectionReference = db.collection("gallery")
 
 val searchCollection: CollectionReference = db.collection("searches")
 
@@ -76,3 +77,14 @@ fun uploadAudioFile(audioStream: InputStream, onUpload: (audioUrl: String) -> Un
         }
 }
 
+fun withInfo(lambda: (info: Info) -> Unit) {
+    infoCollection.document("ec_info").addSnapshotListener { snapshot, _ ->
+        snapshot?.toObject<Info>()?.let { lambda(it) }
+    }
+}
+
+fun withPictureList(lambda: (pictureList: List<Picture>) -> Unit) {
+    galleryCollection.addSnapshotListener { snapshot, _ ->
+        snapshot?.toObjects<Picture>()?.let { lambda(it) }
+    }
+}

@@ -7,13 +7,8 @@
         android:title="Roadmap" />
 
     <item
-        android:id="@+id/infoFragment"
-        android:icon="@drawable/ec"
-        android:title="@string/app_name" />
-
-    <item
-        android:id="@+id/voteFragment"
-        android:title="@string/vote" />
+        android:id="@+id/pictureListFragment"
+        android:title="@string/gallery" />
 
     <item
         android:id="@+id/paymentFragment"
@@ -36,11 +31,11 @@
         android:title="Staff" />
 
     <item
-        android:id="@+id/hotlineFragment"
-        android:title="Emergency Hotlines" />
-
-    <item
         android:id="@+id/symbolsFragment"
         android:title="Voting Symbols" />
 
+
+    <item
+        android:id="@+id/infoFragment"
+        android:title="@string/about_electoral_commission" />
 </menu>
