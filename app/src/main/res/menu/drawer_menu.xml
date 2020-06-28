@@ -11,6 +11,10 @@
         android:title="@string/gallery" />
 
     <item
+        android:id="@+id/checkerFragment"
+        android:title="@string/voter_checker" />
+
+    <item
         android:id="@+id/infoFragment"
         android:title="@string/about_electoral_commission" />
 

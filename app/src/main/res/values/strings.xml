@@ -21,4 +21,8 @@
     <string name="representative">Representative</string>
     <string name="date">Date of Registration</string>
     <string name="party">Party</string>
+    <string name="voter_checker_info">Enter your National Identification Number to find out if you are registered to vote</string>
+    <string name="nin">National Identification Number</string>
+    <string name="check">CHECK</string>
+    <string name="voter_checker">Voter Checker</string>
 </resources>

@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:padding="6dp"
-            app:addDivider="@{true}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:pictureList="@{galleryViewModel.pictureListLiveData }"
             tools:listitem="@layout/picture_item" />

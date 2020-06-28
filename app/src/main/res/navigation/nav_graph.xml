@@ -38,6 +38,11 @@
             android:name="partyId"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/checkerFragment"
+        android:name="com.lokech.electoralcommission.checker.CheckerFragment"
+        android:label="@string/voter_checker"
+        tools:layout="@layout/fragment_checker" />
 
 
 </navigation>
