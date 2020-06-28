@@ -25,7 +25,14 @@ fun Context.openBrowserApp(link: String) {
     startActivity(intent)
 }
 
+
 fun Context.openDialerApp(number: String) {
+    val intent = Intent(Intent.ACTION_DIAL)
+    intent.data = Uri.parse("tel:$number")
+    startActivity(intent)
+}
+
+fun Fragment.openDialerApp(number: String) {
     val intent = Intent(Intent.ACTION_DIAL)
     intent.data = Uri.parse("tel:$number")
     startActivity(intent)

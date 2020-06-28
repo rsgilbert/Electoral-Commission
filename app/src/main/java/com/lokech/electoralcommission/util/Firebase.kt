@@ -2,6 +2,7 @@ package com.lokech.electoralcommission.util
 
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.firestore.ktx.toObjects
@@ -10,6 +11,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
 import com.lokech.electoralcommission.data.Info
+import com.lokech.electoralcommission.data.Party
 import com.lokech.electoralcommission.data.Picture
 import timber.log.Timber
 import java.io.InputStream
@@ -23,6 +25,8 @@ val storage: FirebaseStorage = Firebase.storage
 val infoCollection = db.collection("info")
 
 val galleryCollection: CollectionReference = db.collection("gallery")
+
+val partyCollection: CollectionReference = db.collection("parties")
 
 val searchCollection: CollectionReference = db.collection("searches")
 
@@ -86,5 +90,18 @@ fun withInfo(lambda: (info: Info) -> Unit) {
 fun withPictureList(lambda: (pictureList: List<Picture>) -> Unit) {
     galleryCollection.addSnapshotListener { snapshot, _ ->
         snapshot?.toObjects<Picture>()?.let { lambda(it) }
+    }
+}
+
+fun withPartyList(lambda: (partyList: List<Party>) -> Unit) {
+    partyCollection.addSnapshotListener { snapshot, _ ->
+        snapshot?.toObjects<Party>()?.let { lambda(it) }
+    }
+}
+
+fun withParty(partyId: String, lambda: (party: Party) -> Unit) {
+    partyCollection.document(partyId.trim()).addSnapshotListener { snapshot, e ->
+        partyCollection.document(partyId.trim()).set("id" to partyId.trim(), SetOptions.merge())
+        snapshot?.toObject<Party>()?.let { lambda(it) }
     }
 }

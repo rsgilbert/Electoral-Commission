@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -7,8 +6,8 @@
     <data>
 
         <variable
-            name="galleryViewModel"
-            type="com.lokech.electoralcommission.gallery.GalleryViewModel" />
+            name="partyListViewModel"
+            type="com.lokech.electoralcommission.parties.PartyListViewModel" />
     </data>
 
     <RelativeLayout
@@ -17,15 +16,15 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/pictureList"
+            android:id="@+id/partyList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:padding="6dp"
             app:addDivider="@{true}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:pictureList="@{galleryViewModel.pictureListLiveData }"
-            tools:listitem="@layout/picture_item" />
+            app:partyList="@{partyListViewModel.partyListLiveData }"
+            tools:listitem="@layout/party_item" />
 
     </RelativeLayout>
 </layout>

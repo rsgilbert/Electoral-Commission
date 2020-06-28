@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.lokech.electoralcommission.data.Party
 import com.lokech.electoralcommission.data.Picture
 import com.lokech.electoralcommission.gallery.PictureListAdapter
+import com.lokech.electoralcommission.parties.PartyListAdapter
 import de.hdodenhof.circleimageview.CircleImageView
 
 @BindingAdapter("imageUrl")
@@ -67,9 +69,17 @@ fun RecyclerView.addDivider(shouldAdd: Boolean?) =
     }
 
 @BindingAdapter("pictureList")
-fun RecyclerView.bindJourneysList(pictures: List<Picture>?) {
+fun RecyclerView.bindPictureList(pictures: List<Picture>?) {
     pictures?.let {
         (adapter as PictureListAdapter).submitList(pictures)
     }
-
 }
+
+@BindingAdapter("partyList")
+fun RecyclerView.bindPartyList(partyList: List<Party>?) {
+    partyList?.let {
+        (adapter as PartyListAdapter).submitList(partyList)
+    }
+}
+
+

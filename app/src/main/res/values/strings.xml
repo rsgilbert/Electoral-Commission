@@ -16,4 +16,9 @@
     <string name="tollfree">Toll Free</string>
     <string name="gallery">Gallery</string>
     <string name="about_electoral_commission">About Electoral Commission</string>
+    <string name="parties">Political Parties</string>
+    <string name="name">Political Party</string>
+    <string name="representative">Representative</string>
+    <string name="date">Date of Registration</string>
+    <string name="party">Party</string>
 </resources>

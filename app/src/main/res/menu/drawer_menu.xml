@@ -3,20 +3,30 @@
 
 
     <item
-        android:id="@+id/roadmapFragment"
-        android:title="Roadmap" />
+        android:id="@+id/partyListFragment"
+        android:title="@string/parties" />
 
     <item
         android:id="@+id/pictureListFragment"
         android:title="@string/gallery" />
 
     <item
-        android:id="@+id/paymentFragment"
-        android:title="Payments" />
+        android:id="@+id/infoFragment"
+        android:title="@string/about_electoral_commission" />
 
     <item
         android:id="@+id/newsListFragment"
         android:title="News" />
+
+    <item
+        android:id="@+id/roadmapFragment"
+        android:title="Roadmap" />
+
+
+    <item
+        android:id="@+id/paymentFragment"
+        android:title="Payments" />
+
 
     <item
         android:id="@+id/pollingstationsFragment"
@@ -35,7 +45,4 @@
         android:title="Voting Symbols" />
 
 
-    <item
-        android:id="@+id/infoFragment"
-        android:title="@string/about_electoral_commission" />
 </menu>

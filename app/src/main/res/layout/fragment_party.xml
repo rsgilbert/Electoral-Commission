@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="partyViewModel"
+            type="com.lokech.electoralcommission.parties.PartyViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/symbol"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/spacing_normal"
+                app:imageUrl="@{partyViewModel.partyLiveData.symbol}"
+                tools:src="@drawable/ec" />
+
+
+            <RelativeLayout
+                android:id="@+id/name_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:minHeight="80dp"
+                app:addClickAnimation="@{true}">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/name_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:src="@drawable/ic_info" />
+
+
+                <TextView
+                    android:id="@+id/name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/name_img"
+                    android:text="@string/name"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_title"
+                    android:layout_toEndOf="@+id/name_img"
+                    android:text="@{partyViewModel.partyLiveData.name}"
+                    android:textColor="@android:color/black"
+                    tools:text="Activist Party (AP)" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/representative_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:minHeight="80dp"
+                app:addClickAnimation="@{true}">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/representative_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:src="@drawable/ic_person" />
+
+
+                <TextView
+                    android:id="@+id/representative_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/representative_img"
+                    android:text="@string/representative"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/representative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/representative_title"
+                    android:layout_toEndOf="@+id/representative_img"
+                    android:text="@{partyViewModel.partyLiveData.representative}"
+                    android:textColor="@android:color/black"
+                    tools:text="Hon. Kaggwa Emmanuel" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/date_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:minHeight="80dp"
+                app:addClickAnimation="@{true}">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/date_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:src="@drawable/ic_date" />
+
+
+                <TextView
+                    android:id="@+id/date_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/date_img"
+                    android:text="@string/date"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_title"
+                    android:layout_toEndOf="@+id/date_img"
+                    android:text="@{partyViewModel.partyLiveData.date}"
+                    android:textColor="@android:color/black"
+                    tools:text="Friday, 13th February 2005" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

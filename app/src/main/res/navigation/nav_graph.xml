@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/roadmapFragment">
+    app:startDestination="@id/partyListFragment">
 
     <fragment
         android:id="@+id/roadmapFragment"
@@ -20,6 +20,24 @@
         android:name="com.lokech.electoralcommission.gallery.PictureListFragment"
         android:label="@string/gallery"
         tools:layout="@layout/picture_list" />
+    <fragment
+        android:id="@+id/partyListFragment"
+        android:name="com.lokech.electoralcommission.parties.PartyListFragment"
+        android:label="@string/parties"
+        tools:layout="@layout/party_list">
+        <action
+            android:id="@+id/action_partyListFragment_to_partyFragment"
+            app:destination="@id/partyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partyFragment"
+        android:name="com.lokech.electoralcommission.parties.PartyFragment"
+        android:label="@string/party"
+        tools:layout="@layout/fragment_party">
+        <argument
+            android:name="partyId"
+            app:argType="string" />
+    </fragment>
 
 
 </navigation>
