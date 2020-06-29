@@ -15,6 +15,13 @@
         android:title="@string/voter_checker" />
 
     <item
+        android:id="@+id/roadmapFragment"
+        android:title="Roadmap" />
+
+    <item
+        android:id="@+id/paymentFragment"
+        android:title="Payments" />
+    <item
         android:id="@+id/infoFragment"
         android:title="@string/about_electoral_commission" />
 
@@ -22,14 +29,6 @@
         android:id="@+id/newsListFragment"
         android:title="News" />
 
-    <item
-        android:id="@+id/roadmapFragment"
-        android:title="Roadmap" />
-
-
-    <item
-        android:id="@+id/paymentFragment"
-        android:title="Payments" />
 
 
     <item
