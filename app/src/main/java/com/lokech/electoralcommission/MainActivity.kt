@@ -42,7 +42,8 @@ class MainActivity : AppCompatActivity() {
                     R.id.infoFragment,
                     R.id.pictureListFragment,
                     R.id.partyListFragment,
-                    R.id.checkerFragment
+                    R.id.checkerFragment,
+                    R.id.paymentFragment
                 ),
                 drawerLayout
             )

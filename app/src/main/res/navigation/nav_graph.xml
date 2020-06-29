@@ -43,6 +43,11 @@
         android:name="com.lokech.electoralcommission.checker.CheckerFragment"
         android:label="@string/voter_checker"
         tools:layout="@layout/fragment_checker" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.lokech.electoralcommission.payment.PaymentFragment"
+        android:label="Payments"
+        tools:layout="@layout/fragment_payment" />
 
 
 </navigation>
