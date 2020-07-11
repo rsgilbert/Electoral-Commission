@@ -105,3 +105,4 @@ fun withParty(partyId: String, lambda: (party: Party) -> Unit) {
         snapshot?.toObject<Party>()?.let { lambda(it) }
     }
 }
+

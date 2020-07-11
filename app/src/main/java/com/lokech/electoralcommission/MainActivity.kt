@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration =
             AppBarConfiguration(
                 setOf(
+                    R.id.homeFragment,
                     R.id.roadmapFragment,
                     R.id.infoFragment,
                     R.id.pictureListFragment,

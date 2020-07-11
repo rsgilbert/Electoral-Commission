@@ -7,6 +7,7 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.lokech.electoralcommission.data.Party
@@ -78,8 +79,14 @@ fun RecyclerView.bindPictureList(pictures: List<Picture>?) {
 @BindingAdapter("partyList")
 fun RecyclerView.bindPartyList(partyList: List<Party>?) {
     partyList?.let {
-        (adapter as PartyListAdapter).submitList(partyList)
+        (adapter as PartyListAdapter).submitList(it)
     }
 }
 
 
+@BindingAdapter("viewPagerList")
+fun ViewPager2.bindViewPagerList(pictureList: List<String>?) {
+    pictureList?.let {
+        (adapter as com.lokech.electoralcommission.home.PictureListAdapter).submitList(it)
+    }
+}

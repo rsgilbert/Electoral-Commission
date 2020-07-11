@@ -25,4 +25,6 @@
     <string name="nin">National Identification Number</string>
     <string name="check">CHECK</string>
     <string name="voter_checker">Voter Checker</string>
+    <string name="home">Home</string>
+    <string name="picture">Picture</string>
 </resources>
