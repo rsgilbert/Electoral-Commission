@@ -11,7 +11,6 @@ import androidx.fragment.app.viewModels
 import com.lokech.electoralcommission.R
 import com.lokech.electoralcommission.databinding.DialogEditBinding
 import com.lokech.electoralcommission.databinding.FragmentPaymentBinding
-import com.lokech.electoralcommission.databinding.PaymentPositionBinding
 import org.jetbrains.anko.support.v4.toast
 
 
@@ -25,30 +24,30 @@ class PaymentFragment : Fragment() {
     ): View? {
         setHasOptionsMenu(true)
         val binding =
-            DataBindingUtil.inflate<PaymentPositionBinding>(
+            DataBindingUtil.inflate<FragmentPaymentBinding>(
                 inflater,
-                R.layout.payment_position,
+                R.layout.fragment_payment,
                 container,
                 false
             )
 
 
-//        binding.paymentViewModel = paymentViewModel
-//        binding.apply {
-//            lifecycleOwner = viewLifecycleOwner
-//
-//            positionSection.setOnClickListener { startPositionDialog() }
-//            typeSection.setOnClickListener { startTypeDialog() }
-//            networkSection.setOnClickListener { startNetworkDialog() }
-//            numberSection.setOnClickListener { startNumberDialog() }
-//
-//
-//
-//
-//            btnSubmit.setOnClickListener {
-//                toast("Submitted")
-//            }
-//        }
+        binding.paymentViewModel = paymentViewModel
+        binding.apply {
+            lifecycleOwner = viewLifecycleOwner
+
+            positionSection.setOnClickListener { startPositionDialog() }
+            typeSection.setOnClickListener { startTypeDialog() }
+            networkSection.setOnClickListener { startNetworkDialog() }
+            numberSection.setOnClickListener { startNumberDialog() }
+
+
+
+
+            btnSubmit.setOnClickListener {
+                toast("Submitted")
+            }
+        }
 
 
         return binding.root

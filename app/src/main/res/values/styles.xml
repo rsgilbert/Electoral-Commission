@@ -12,4 +12,8 @@
         <item name="textAllCaps">false</item>
     </style>
 
+    <style name="splashTheme" parent="Theme.AppCompat.NoActionBar">
+
+    </style>
+
 </resources>
