@@ -11,6 +11,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
 import com.lokech.electoralcommission.data.Info
+import com.lokech.electoralcommission.data.News
 import com.lokech.electoralcommission.data.Party
 import com.lokech.electoralcommission.data.Picture
 import timber.log.Timber
@@ -27,6 +28,8 @@ val infoCollection = db.collection("info")
 val galleryCollection: CollectionReference = db.collection("gallery")
 
 val partyCollection: CollectionReference = db.collection("parties")
+
+val newsCollection: CollectionReference = db.collection("news")
 
 val searchCollection: CollectionReference = db.collection("searches")
 
@@ -106,3 +109,8 @@ fun withParty(partyId: String, lambda: (party: Party) -> Unit) {
     }
 }
 
+fun withNewsList(lambda: (newsList: List<News>) -> Unit) {
+    newsCollection.addSnapshotListener { snapshot, _ ->
+        snapshot?.toObjects<News>()?.let { lambda(it) }
+    }
+}

@@ -22,7 +22,7 @@
         android:title="Roadmap" />
 
     <item
-        android:id="@+id/paymentFragment"
+        android:id="@+id/paymentPositionFragment"
         android:title="Payments" />
     <item
         android:id="@+id/infoFragment"

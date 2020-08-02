@@ -39,11 +39,6 @@
         android:label="@string/voter_checker"
         tools:layout="@layout/fragment_checker" />
     <fragment
-        android:id="@+id/paymentFragment"
-        android:name="com.lokech.electoralcommission.payment.PaymentFragment"
-        android:label="Payments"
-        tools:layout="@layout/fragment_payment" />
-    <fragment
         android:id="@+id/roadmapFragment"
         android:name="com.lokech.electoralcommission.roadmap.RoadmapFragment"
         android:label="Roadmap"
@@ -53,6 +48,35 @@
         android:name="com.lokech.electoralcommission.home.HomeFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_home_old" />
+    <fragment
+        android:id="@+id/paymentPositionFragment"
+        android:name="com.lokech.electoralcommission.payment.PaymentPositionFragment"
+        android:label="Payments"
+        tools:layout="@layout/payment_position">
+        <action
+            android:id="@+id/action_paymentPositionFragment_to_paymentTypeFragment"
+            app:destination="@id/paymentTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentTypeFragment"
+        android:name="com.lokech.electoralcommission.payment.PaymentTypeFragment"
+        android:label="Payment Type"
+        tools:layout="@layout/payment_type">
+        <action
+            android:id="@+id/action_paymentTypeFragment_to_paymentNetworkFragment"
+            app:destination="@id/paymentNetworkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentNetworkFragment"
+        android:name="com.lokech.electoralcommission.payment.PaymentNetworkFragment"
+        android:label="Mobile Network"
+        tools:layout="@layout/payment_network" />
+
+    <fragment
+        android:id="@+id/newsListFragment"
+        android:name="com.lokech.electoralcommission.news.NewsListFragment"
+        android:label="News"
+        tools:layout="@layout/news_list" />
 
 
 </navigation>

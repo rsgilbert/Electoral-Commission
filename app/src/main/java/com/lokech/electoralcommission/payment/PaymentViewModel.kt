@@ -6,9 +6,10 @@ import androidx.lifecycle.ViewModel
 
 class PaymentViewModel : ViewModel() {
 
-    val paymentLiveData = MutableLiveData<Payment>().apply { value = Payment() }
+    val paymentLiveData = MutableLiveData(Payment())
 
 
+    val networkLiveData = MutableLiveData(0)
 }
 
 

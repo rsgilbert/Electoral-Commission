@@ -9,10 +9,20 @@
             type="com.lokech.electoralcommission.info.InfoViewModel" />
     </data>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
         android:padding="@dimen/spacing_normal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mission" />
 
         <TextView
             android:layout_width="match_parent"
@@ -23,5 +33,6 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/middle_size"
             tools:text="This is our mission" />
-    </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 </layout>

@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity() {
                     R.id.pictureListFragment,
                     R.id.partyListFragment,
                     R.id.checkerFragment,
-                    R.id.paymentFragment
+                    R.id.newsListFragment,
+                    R.id.paymentPositionFragment
                 ),
                 drawerLayout
             )

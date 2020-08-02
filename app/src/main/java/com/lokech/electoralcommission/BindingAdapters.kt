@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.lokech.electoralcommission.data.News
 import com.lokech.electoralcommission.data.Party
 import com.lokech.electoralcommission.data.Picture
 import com.lokech.electoralcommission.gallery.PictureListAdapter
+import com.lokech.electoralcommission.news.NewsListAdapter
 import com.lokech.electoralcommission.parties.PartyListAdapter
 import de.hdodenhof.circleimageview.CircleImageView
 
@@ -83,6 +85,13 @@ fun RecyclerView.bindPartyList(partyList: List<Party>?) {
     }
 }
 
+
+@BindingAdapter("newsList")
+fun RecyclerView.bindNewsList(newsList: List<News>?) {
+    newsList?.let {
+        (adapter as NewsListAdapter).submitList(it)
+    }
+}
 
 @BindingAdapter("viewPagerList")
 fun ViewPager2.bindViewPagerList(pictureList: List<String>?) {
